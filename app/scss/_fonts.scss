@@ -1,15 +1,31 @@
 @font-face {
-  font-family: "RobotoRegular";
-  src: url("../fonts/RobotoRegular/RobotoRegular.woff2") format("woff2"),
-       url("../fonts/RobotoRegular/RobotoRegular.woff") format("woff");
+  font-family: 'Circe-Bold';
+  src: url('../fonts/Circe-Bold/Circe-Bold.woff2') format('woff2'),
+       url('../fonts/Circe-Bold/Circe-Bold.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "RobotoBold";
-  src: url("../fonts/RobotoBold/RobotoBold.woff2") format("woff2"),
-       url("../fonts/RobotoBold/RobotoBold.woff") format("woff");
+  font-family: 'Circe-ExtraBold';
+  src: url('../fonts/Circe-ExtraBold/Circe-ExtraBold.woff2') format('woff2'),
+       url('../fonts/Circe-ExtraBold/Circe-ExtraBold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Circe-ExtraLight';
+  src: url('../fonts/Circe-ExtraLight/Circe-ExtraLight.woff2') format('woff2'),
+  url('../fonts/Circe-ExtraLight/Circe-ExtraLight.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Circe-Light';
+  src: url('../fonts/Circe-Light/Circe-Light.woff2') format('woff2'),
+  url('../fonts/Circe-Light/Circe-Light.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }

@@ -1,0 +1,15 @@
+mixin logo(isMain, isHeader)
+  if isMain
+    +b.logo&attributes(attributes)
+      if isHeader
+        img(src='img/logo.png' alt='Odyssey - аренда яхт на Пхукете')
+        img(src='img/logo-active.png' alt='Odyssey - аренда яхт на Пхукете')
+      else
+        img(src='img/logo.png' alt='Odyssey - аренда яхт на Пхукете')
+  else
+    +b('a')(href='/').logo&attributes(attributes)
+      if isHeader
+        img(src='img/logo.png' alt='Odyssey - аренда яхт на Пхукете')
+        img(src='img/logo-active.png' alt='Odyssey - аренда яхт на Пхукете')
+      else
+        img(src='img/logo.png' alt='Odyssey - аренда яхт на Пхукете')

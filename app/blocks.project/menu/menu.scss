@@ -1,0 +1,103 @@
+// Для импорта в файл подключения: @import './app/blocks.project/menu/menu';
+
+@import '../../scss/vars';     // файл с переменными
+@import '../../scss/png-sprite';    // файл с png-спрайтами
+
+
+.menu {
+  display: inline-block;
+  font-size: 0;
+  text-align: left;
+  @include respond-to(xl) {
+    display: block;
+  }
+
+  &__item {
+    display: inline-block;
+    margin-right: 41px;
+    @include respond-to(xl) {
+      display: block;
+      margin-right: 0;
+      margin-bottom: 23px;
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+      position: relative;
+      left: -100px;
+      opacity: 0;
+      transition: all ease .5s;
+      &:nth-of-type(1) {
+        transition-delay: .3s;
+      }
+      &:nth-of-type(2) {
+        transition-delay: .6s;
+      }
+      &:nth-of-type(3) {
+        transition-delay: .9s;
+      }
+      &:nth-of-type(4) {
+        transition-delay: 1.2s;
+      }
+      &:nth-of-type(5) {
+        transition-delay: 1.5s;
+      }
+      &:nth-of-type(6) {
+        transition-delay: 1.8s;
+      }
+      &:nth-of-type(7) {
+        transition-delay: 2.1s;
+      }
+      &:nth-of-type(8) {
+        transition-delay: 2.4s;
+      }
+      &:nth-of-type(9) {
+        transition-delay: 2.7s;
+      }
+      &:nth-of-type(10) {
+        transition-delay: 3s;
+      }
+    }
+    &:last-of-type {
+      margin-right: 0;
+    }
+    &_active {
+      .menu__link {
+        color: $accentColor;
+        &:before {
+          background-color: $accentColor;
+          content: '';
+          position: absolute;
+          top: -10px;
+          left: 0;
+          height: 4px;
+          width: 30px;
+          @include respond-to(xl) {
+            top: auto;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+          }
+        }
+      }
+    }
+  }
+
+  &__link {
+    font-size: 16px;
+    line-height: 1.2;
+    color: #fff;
+    transition: $transition;
+    text-decoration: none;
+    position: relative;
+    @include respond-to(xl) {
+      display: inline-block;
+      font-size: 18px;
+      color: #363636;
+      padding-bottom: 12px;
+    }
+    &:hover {
+      color: $accentColor;
+    }
+  }
+
+}

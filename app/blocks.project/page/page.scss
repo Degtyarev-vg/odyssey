@@ -18,6 +18,11 @@
   position: relative;
   overflow-x: hidden;
   height: 100vh;
+  @include respond-to(xl) {
+    &_fixed {
+      position: fixed;
+    }
+  }
 
   &__header, &__footer {
     flex-shrink: 0;

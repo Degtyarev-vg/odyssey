@@ -1,15 +1,17 @@
-$RobotoRegular: "RobotoRegular", "Helvetica", "Tahoma", sans-serif;
-$RobotoBold: "RobotoBold", "Helvetica", "Tahoma", sans-serif;
+$Circe-Bold: 'Circe-Bold', 'Helvetica', 'Tahoma', sans-serif;
+$Circe-ExtraBold: 'Circe-ExtraBold', 'Helvetica', 'Tahoma', sans-serif;
+$Circe-ExtraLight: 'Circe-ExtraLight', 'Helvetica', 'Tahoma', sans-serif;
+$Circe-Light: 'Circe-Light', 'Helvetica', 'Tahoma', sans-serif;
 
-$default-font: $RobotoRegular;
+$default-font: $Circe-Light;
 
 $transition: all ease .3s;
 
 $mainColor: #fff;
-$accentColor: #000;
+$accentColor: #ffd200;
 
 // Breakpoints
-$grid-max-width: 1140px;
+$grid-max-width: 1200px;
 
 $grid-breakpoints:
   xl 1199.9px 960px,

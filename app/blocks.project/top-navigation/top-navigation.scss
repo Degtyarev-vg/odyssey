@@ -1,0 +1,206 @@
+// Для импорта в файл подключения: @import './app/blocks.project/top-navigation/top-navigation';
+
+@import '../../scss/vars';     // файл с переменными
+@import '../../scss/png-sprite';    // файл с png-спрайтами
+
+
+.top-navigation {
+  font-size: 0;
+  background-color: dodgerblue; /* DELETE */
+  padding: 10px 0;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+
+  &_open {
+    @include respond-to(xl) {
+      background-color: #fff;
+      padding: 10px 0 90px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      transform: translateX(0);
+      height: 100vh;
+      width: 100%;
+      overflow-y: auto;
+      overflow-x: hidden;
+      .top-navigation__logo {
+        img {
+          display: none;
+          &:nth-of-type(2) {
+            display: inline-block;
+          }
+        }
+      }
+      .top-navigation__toggle-container {
+        height: auto;
+        overflow: inherit;
+      }
+      .top-navigation__lang-switcher-container {
+        top: 0;
+        opacity: 1;
+      }
+      .top-navigation__lang-switcher {
+        display: block;
+        .lang-switcher__item {
+          a {
+            color: #999;
+          }
+        }
+        .current-lang {
+          a {
+            background-color: #e5ebff;
+          }
+        }
+      }
+      .top-navigation__phone {
+        opacity: 1;
+      }
+      .menu__item {
+        left: 0;
+        opacity: 1;
+      }
+    } // respond
+  } // ._open
+
+  &__logo {
+    img {
+      &:nth-of-type(2) {
+        display: none;
+      }
+    }
+  }
+
+  &__inner {
+    font-size: 0;
+  }
+
+  &__logo-container {
+    display: inline-block;
+    vertical-align: top;
+    width: 150px;
+    @include respond-to(xl) {
+      width: 125px;
+    }
+  }
+  &__toggle-container {
+    display: inline-block;
+    vertical-align: top;
+    padding: 23px 30px 0;
+    position: relative;
+    text-align: right;
+    right: 101px;
+    width: calc(100% - 251px);
+    @include respond-to(xl) {
+      padding: 0;
+      right: auto;
+      width: 100%;
+      height: 0;
+      overflow: hidden;
+    }
+  }
+  &__lang-switcher-container {
+    display: inline-block;
+    vertical-align: top;
+    padding-top: 15px;
+    position: relative;
+    text-align: right;
+    left: calc(100% - 251px);
+    width: 101px;
+    @include respond-to(xl) {
+      left: auto;
+      padding: 10px 10px 0 0;
+      width: calc(100% - 175px);
+      transition: all ease .7s;
+      transition-delay: .3s;
+      top: -20px;
+      opacity: 0;
+    }
+  }
+
+  &__menu-container {
+    display: inline-block;
+    vertical-align: top;
+    padding-right: 62px;
+    @include respond-to(xl) {
+      display: block;
+      padding: 28px 0 15px;
+      margin: 16px 0 34px;
+      position: relative;
+      &:before, &:after {
+        content: '';
+        background-color: #e5ebff;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 1px;
+        width: calc(100% - 60px);
+      }
+      &:before {
+        top: 0;
+      }
+      &:after {
+        bottom: 0;
+      }
+    }
+  }
+  &__phone-container {
+    display: inline-block;
+    vertical-align: top;
+    @include respond-to(xl) {
+      text-align: center;
+      width: 100%;
+    }
+  }
+
+  &__phone {
+    font-family: $Circe-ExtraBold;
+    font-size: 18px;
+    line-height: 1;
+    padding-left: 26px;
+    position: relative;
+    color: $accentColor;
+    transition: $transition;
+    text-decoration: none;
+    @include respond-to(xl) {
+      opacity: 0;
+      transition-delay: 2s;
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      background: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20height%3D%2216%22%20width%3D%2216%22%3E%3Cpath%20d%3D%22M15.644%2012.658l-2.471-2.478a1.291%201.29%200%200%200-1.82.034l-1.241%201.248c-.08-.044-.16-.089-.25-.137A11.711%2011.707%200%200%201%204.7%206.148c-.05-.084-.09-.164-.13-.241l.83-.837.41-.412a1.285%201.285%200%200%200%20.03-1.82L3.37.358a1.277%201.277%200%200%200-1.81.034l-.7.7.02.02a3.982%203.98%200%200%200-.571%201.013%204.057%204.056%200%200%200-.26%201.03c-.32%202.71.91%205.189%204.271%208.551%204.632%204.648%208.373%204.3%208.533%204.28a4.142%204.14%200%200%200%201.03-.26%204.201%204.2%200%200%200%201.01-.572l.01.014.71-.692a1.3%201.3%200%200%200%20.03-1.819z%22%20opacity%3D%22.5%22%20fill%3D%22%23fff%22%20fill-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E') center no-repeat;
+      background-size: contain;
+      height: 16px;
+      width: 16px;
+      @include respond-to(xl) {
+        background: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2216%22%20height%3D%2216%22%3E%3Cpath%20d%3D%22M15.644%2012.658l-2.471-2.478a1.291%201.29%200%200%200-1.82.034l-1.241%201.248c-.08-.044-.16-.089-.25-.137A11.711%2011.707%200%200%201%204.7%206.148c-.05-.084-.09-.164-.13-.241l.83-.837.41-.412a1.285%201.285%200%200%200%20.03-1.82L3.37.358a1.277%201.277%200%200%200-1.81.034l-.7.7.02.02a3.982%203.98%200%200%200-.571%201.013%204.057%204.056%200%200%200-.26%201.03c-.32%202.71.91%205.189%204.271%208.551%204.632%204.648%208.373%204.3%208.533%204.28a4.142%204.14%200%200%200%201.03-.26%204.201%204.2%200%200%200%201.01-.572l.01.014.71-.692a1.3%201.3%200%200%200%20.03-1.819z%22%20opacity%3D%22.5%22%20fill%3D%22%23ccc%22%20fill-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E') center no-repeat;
+      }
+    }
+    &:hover {
+      color: #fff;
+      @include respond-to(xl) {
+        color: $accentColor;
+      }
+    }
+  }
+
+  &__hamburger {
+    display: none;
+    @include respond-to(xl) {
+      display: inline-block;
+    }
+  }
+
+  &__lang-switcher {
+    @include respond-to(xl) {
+      display: none;
+    }
+  }
+
+}

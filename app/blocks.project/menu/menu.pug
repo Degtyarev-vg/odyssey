@@ -1,0 +1,8 @@
+mixin menu()
+  +b('nav').menu&attributes(attributes)
+    +e('ul').list
+      - let i = 0;
+      each item in topMenu
+        +e('li')(class='item' + ((i === 0) ? '_active' : '' ))
+          +e('a')(href=item.link).link !{item.name}
+        - i++;

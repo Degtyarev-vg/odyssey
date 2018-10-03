@@ -1,0 +1,16 @@
+mixin header(isMain, isHeader)
+  +b('header').header&attributes(attributes)
+    +b.top-navigation.__top-navigation
+      .grid
+        +e.inner
+          +e.logo-container
+            +logo(isMain, isHeader).__logo
+          +e.lang-switcher-container
+            +lang-switcher.__lang-switcher
+          +hamburger.__hamburger
+          +e.toggle-container
+            +e.menu-container
+              +menu
+            +e.phone-container
+              +e('a')(href='tel:+66911625639').phone +66 (911) 62 56 39
+    block

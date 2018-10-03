@@ -1,0 +1,65 @@
+// Для импорта в файл подключения: @import './app/blocks.project/hamburger/hamburger';
+
+@import '../../scss/vars';     // файл с переменными
+@import '../../scss/png-sprite';    // файл с png-спрайтами
+
+
+.hamburger {
+  background-color: transparent;
+  border-radius: 50%;
+  //display: inline-block;
+  width: 50px;
+  height: 50px;
+  text-decoration: none;
+  position: relative;
+  z-index: 10;
+
+  &__btn {
+    background-color: #363636;
+    display: inline-block;
+    vertical-align: top;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 1px;
+    width: 16px;
+    transform: translate(-50%, -50%);
+    transition: all ease 0.3s;
+    backface-visibility: hidden;
+    &:before, &:after {
+      content: '';
+      background-color: #363636;
+      position: absolute;
+      left: 0;
+      height: 1px;
+      width: 16px;
+      transform-origin: top left;
+      transition: all ease 0.3s;
+      backface-visibility: hidden;
+    }
+    &:before {
+      bottom: 5px;
+    }
+    &:after {
+      top: 5px;
+    }
+  }
+
+  &_on {
+    background-color: $accentColor;
+    .hamburger__btn {
+      background-color: transparent;
+      &:before {
+        left: 50%;
+        bottom: 0;
+        transform: rotate(45deg) translateX(-50%);
+      }
+      &:after {
+        left: 50%;
+        top: 0;
+        transform: rotate(-45deg) translate(-50%);
+      }
+    }
+  }
+
+}

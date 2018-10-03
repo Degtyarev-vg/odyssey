@@ -1,0 +1,38 @@
+// Для импорта в файл подключения: @import './app/blocks.project/lang-switcher/lang-switcher';
+
+@import '../../scss/vars';     // файл с переменными
+@import '../../scss/png-sprite';    // файл с png-спрайтами
+
+
+.lang-switcher {
+  display: inline-block;
+  font-size: 0;
+
+  &__item {
+    display: inline-block;
+    overflow: hidden;
+    a {
+      background-color: transparent;
+      border-radius: 20px;
+      display: inline-block;
+      font-family: $Circe-Light;
+      font-size: 14px;
+      line-height: 1;
+      color: #fff;
+      transition: $transition;
+      text-decoration: none;
+      padding: 8px 14px;
+      &:hover {
+        color: $accentColor;
+      }
+    }
+  }
+
+  .current-lang {
+    a {
+      background-color: #fff;
+      color: #363636;
+    }
+  }
+
+}
