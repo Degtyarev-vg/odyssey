@@ -15,7 +15,7 @@
   z-index: 10;
 
   &__btn {
-    background-color: #363636;
+    background-color: #fff;
     display: inline-block;
     vertical-align: top;
     position: absolute;
@@ -28,7 +28,7 @@
     backface-visibility: hidden;
     &:before, &:after {
       content: '';
-      background-color: #363636;
+      background-color: #fff;
       position: absolute;
       left: 0;
       height: 1px;
@@ -49,6 +49,9 @@
     background-color: $accentColor;
     .hamburger__btn {
       background-color: transparent;
+      &:before, &:after {
+        background-color: #363636;
+      }
       &:before {
         left: 50%;
         bottom: 0;

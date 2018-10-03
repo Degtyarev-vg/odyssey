@@ -1,0 +1,222 @@
+// Для импорта в файл подключения: @import './app/blocks.project/top-slider/top-slider';
+
+@import '../../scss/vars';     // файл с переменными
+@import '../../scss/png-sprite';    // файл с png-спрайтами
+
+
+.top-slider {
+  position: relative;
+
+  &__slider {
+
+  }
+
+  .slick-track {
+    height: 100vh;
+    min-height: 550px;
+  }
+
+  &__slide {
+
+  }
+
+  &__content {
+    padding-top: 20%;
+  }
+
+
+  &__navigation {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding-bottom: 10px;
+  }
+  &__navigation-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+  }
+
+  &__socials-container {
+    font-size: 0;
+    overflow: hidden;
+  }
+  &__social-header {
+    display: inline-block;
+    font-size: 15px;
+    line-height: 1;
+    color: #fff;
+    vertical-align: top;
+    position: relative;
+    padding-right: 20px;
+    margin-right: 50px;
+    &:before {
+      content: '';
+      background-color: #fff;
+      position: absolute;
+      top: 50%;
+      left: 100%;
+      transform: translateY(-50%);
+      opacity: .3;
+      height: 1px;
+      width: 50px;
+    }
+  }
+  &__socials {
+    display: inline-flex;
+    align-items: center;
+    padding: 0 40px 0 20px;
+  }
+  &__social-icon {
+    display: inline-block;
+    margin-right: 25px;
+    transition: $transition;
+    &:hover {
+      opacity: .5;
+    }
+    &:last-of-type {
+      margin-right: 0;
+    }
+    &_vk {
+      height: 9px;
+      width: 16px;
+    }
+    &_fb {
+      height: 14px;
+      width: 8px;
+    }
+    &_inst {
+      height: 14px;
+      width: 14px;
+    }
+    &_telegram {
+      height: 14px;
+      width: 16px;
+    }
+  }
+
+  &__dots {
+    flex-grow: 1;
+    text-align: right;
+    overflow: hidden;
+    ul {
+      display: inline-flex;
+      padding-left: 34px;
+      position: relative;
+      text-align: left;
+      &:before {
+        content: '';
+        background-color: #fff;
+        position: absolute;
+        transform: translateY(-50%);
+        opacity: .3;
+        top: 50%;
+        right: 100%;
+        height: 1px;
+        width: 1200px;
+      }
+    }
+    li {
+      position: relative;
+      padding-left: 13px;
+      margin-right: 25px;
+      cursor: pointer;
+      transition: $transition;
+      opacity: .65;
+      &:last-of-type {
+        margin-right: 0;
+      }
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: calc(100% - 3px);
+        width: 3px;
+        background-color: transparent;
+      }
+      &:hover {
+        opacity: 1;
+      }
+      &.slick-active {
+        opacity: 1;
+        &:before {
+          background-color: $accentColor;
+        }
+      }
+    }
+  }
+  &__dot-number {
+    font-family: $Circe-ExtraBold;
+    font-size: 18px;
+    line-height: 1;
+    text-transform: uppercase;
+    color: #fff;
+  }
+  &__dot-text {
+    font-family: $Circe-ExtraLight;
+    font-size: 15px;
+    color: #fff;
+    line-height: 1.3;
+    margin-top: 3px;
+    span {
+      display: block;
+    }
+  }
+
+
+
+  &__prev, &__next {
+    border: 1px solid rgba(255, 255, 255, .5);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: $transition;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    &:hover, &:active {
+      .icon {
+        &_arrow-363636 {
+          opacity: 1;
+        }
+        &_arrow-ffffff {
+          opacity: 0;
+        }
+      }
+    }
+    &:hover {
+      background-color: $accentColor;
+      border-color: $accentColor;
+    }
+    &:active {
+      background-color: #ffe873;
+      border-color: #ffe873;
+    }
+    .icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      transition: $transition;
+      height: 11px;
+      width: 16px;
+      &_arrow-363636 {
+        opacity: 0;
+      }
+    }
+  }
+  &__prev {
+    left: 50px;
+    .icon {
+      transform: translate(-50%, -50%) rotate(180deg);
+    }
+  }
+  &__next {
+    right: 50px;
+  }
+
+}

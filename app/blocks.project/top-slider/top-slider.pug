@@ -1,0 +1,30 @@
+mixin top-slider()
+  +b.top-slider&attributes(attributes)
+    +e.slider
+      - let i = 1;
+      each slider in topSlider
+        +e.slide(style='background:url(' + slider.img + ') center no-repeat;background-size:cover' data-dots_text=slider.header)
+          .grid
+            +e.content
+              +e.info
+                +e.counter
+                  +e('span').counter-current 0!{i}
+                  | /
+                  +e('span').counter-total
+                +e.texts
+                  +e('h1').header !{slider.header}
+                  +e('p').text !{slider.text}
+                  +b('a')(href=slider.buttonLink)(class='' + ((slider.buttonScroll) ? 'link-scroll' : '') ).button._full.__button !{slider.buttonText}
+        - i++;
+    +e.navigation
+      .grid
+        +e.navigation-inner
+          +e.socials-container
+            +e.social-header Мы в соц. сетях
+            +e.socials
+              +b('a')(href='#').icon._vk-fff.__social-icon._vk
+              +b('a')(href='#').icon._fb-fff.__social-icon._fb
+              +b('a')(href='#').icon._inst-fff.__social-icon._inst
+              +b('a')(href='#').icon._telegram-fff.__social-icon._telegram
+          +e.dots
+    +e.arrows
