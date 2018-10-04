@@ -6,22 +6,123 @@
 
 .top-slider {
   position: relative;
-
-  &__slider {
-
+  min-height: 550px;
+  @include respond-to(lg) {
+    min-height: 450px;
   }
 
-  .slick-track {
-    height: 100vh;
-    min-height: 550px;
+  .slick-track,
+  .slick-list,
+  .slick-slider {
+    height: 100%;
   }
 
   &__slide {
-
+    @include respond-to(xl) {
+      position: relative;
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0, 0, 0, .45);
+      }
+    }
+    @include respond-to(sm) {
+      &:nth-of-type(1) {
+        background-position: right -190px bottom 0 !important;
+      }
+      &:nth-of-type(3) {
+        background-position: right -190px bottom 0 !important;
+      }
+    }
   }
 
   &__content {
-    padding-top: 20%;
+    position: absolute;
+    bottom: 29%;
+    @include respond-to(lg) {
+      bottom: 80px;
+    }
+    @include respond-to(sm) {
+      padding-left: 20px;
+    }
+  }
+
+  &__info {
+    font-size: 0;
+  }
+
+  &__counter {
+    display: inline-block;
+    vertical-align: top;
+    width: 100px;
+    @include respond-to(lg) {
+      display: none;
+    }
+  }
+  &__counter-current {
+    display: inline-block;
+    margin-right: 20px;
+    font-family: $Circe-ExtraBold;
+    font-size: 30px;
+    line-height: 1;
+    color: #fff;
+  }
+  &__counter-total {
+    font-size: 16px;
+    line-height: 1;
+    color: #fff;
+    opacity: .5;
+    position: relative;
+    &:before {
+      content: '/';
+      position: absolute;
+      top: 2px;
+      left: -11px;
+    }
+  }
+
+  &__texts {
+    display: inline-block;
+    vertical-align: top;
+    color: #fff;
+    width: calc(100% - 100px);
+    @include respond-to(lg) {
+      display: block;
+      width: 100%;
+    }
+  }
+  &__header {
+    font-family: $Circe-ExtraBold;
+    font-size: 70px;
+    line-height: 1;
+    @include respond-to(lg) {
+      font-size: 40px;
+    }
+    @include respond-to(sm) {
+      font-size: 30px;
+    }
+    span {
+      display: block;
+      font-family: $Circe-ExtraLight;
+    }
+  }
+  &__text {
+    font-family: $Circe-ExtraLight;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 15px 0;
+    max-width: 635px;
+    @include respond-to(sm) {
+      max-width: 100%;
+    }
+  }
+
+  &__button {
+    min-width: 190px;
   }
 
 
@@ -31,17 +132,30 @@
     left: 0;
     width: 100%;
     padding-bottom: 10px;
+    @include respond-to(lg) {
+      padding-bottom: 21px;
+    }
+    @include respond-to(sm) {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
   }
   &__navigation-inner {
     display: flex;
     align-items: center;
     justify-content: space-between;
     overflow: hidden;
+    @include respond-to(lg) {
+      display: block;
+    }
   }
 
   &__socials-container {
     font-size: 0;
     overflow: hidden;
+    @include respond-to(lg) {
+      display: none;
+    }
   }
   &__social-header {
     display: inline-block;
@@ -106,6 +220,12 @@
       padding-left: 34px;
       position: relative;
       text-align: left;
+      @include respond-to(lg) {
+        display: flex;
+        align-items: center;
+        font-size: 0;
+        padding-left: 0;
+      }
       &:before {
         content: '';
         background-color: #fff;
@@ -116,6 +236,9 @@
         right: 100%;
         height: 1px;
         width: 1200px;
+        @include respond-to(lg) {
+          display: none;
+        }
       }
     }
     li {
@@ -125,6 +248,15 @@
       cursor: pointer;
       transition: $transition;
       opacity: .65;
+      @include respond-to(lg) {
+        background-color: #fff;
+        border-radius: 50%;
+        display: inline-block;
+        margin-right: 10px;
+        padding-left: 0;
+        height: 6px;
+        width: 6px;
+      }
       &:last-of-type {
         margin-right: 0;
       }
@@ -136,12 +268,19 @@
         height: calc(100% - 3px);
         width: 3px;
         background-color: transparent;
+        @include respond-to(lg) {
+          display: none;
+        }
       }
       &:hover {
         opacity: 1;
       }
       &.slick-active {
         opacity: 1;
+        @include respond-to(lg) {
+          height: 8px;
+          width: 8px;
+        }
         &:before {
           background-color: $accentColor;
         }
@@ -154,6 +293,9 @@
     line-height: 1;
     text-transform: uppercase;
     color: #fff;
+    @include respond-to(lg) {
+      display: none;
+    }
   }
   &__dot-text {
     font-family: $Circe-ExtraLight;
@@ -161,13 +303,20 @@
     color: #fff;
     line-height: 1.3;
     margin-top: 3px;
+    @include respond-to(lg) {
+      display: none;
+    }
     span {
       display: block;
     }
   }
 
 
-
+  &__arrows {
+    @include respond-to(lg) {
+      display: none;
+    }
+  }
   &__prev, &__next {
     border: 1px solid rgba(255, 255, 255, .5);
     border-radius: 50%;
@@ -178,23 +327,9 @@
     height: 50px;
     width: 50px;
     cursor: pointer;
+    opacity: .65;
     &:hover, &:active {
-      .icon {
-        &_arrow-363636 {
-          opacity: 1;
-        }
-        &_arrow-ffffff {
-          opacity: 0;
-        }
-      }
-    }
-    &:hover {
-      background-color: $accentColor;
-      border-color: $accentColor;
-    }
-    &:active {
-      background-color: #ffe873;
-      border-color: #ffe873;
+      opacity: 1;
     }
     .icon {
       position: absolute;
@@ -211,12 +346,18 @@
   }
   &__prev {
     left: 50px;
+    @media (max-width: 1300px) {
+      left: 5px;
+    }
     .icon {
       transform: translate(-50%, -50%) rotate(180deg);
     }
   }
   &__next {
     right: 50px;
+    @media (max-width: 1300px) {
+      right: 5px;
+    }
   }
 
 }

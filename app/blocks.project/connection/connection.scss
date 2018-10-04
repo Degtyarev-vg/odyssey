@@ -1,0 +1,139 @@
+// Для импорта в файл подключения: @import './app/blocks.project/connection/connection';
+
+@import '../../scss/vars';     // файл с переменными
+@import '../../scss/png-sprite';    // файл с png-спрайтами
+
+
+.connection {
+  position: fixed;
+  bottom: 15px;
+  right: 20px;
+  z-index: 11;
+
+  &_scroll {
+    .connection__open {
+      background-color: $accentColor !important;
+    }
+    .connection__icon-main_connect-fff {
+      opacity: 0 !important;
+    }
+    .connection__icon-main_connect-363636 {
+      opacity: 1 !important;
+    }
+  }
+
+  &_open {
+    .connection__open {
+      background-color: $accentColor !important;
+      border-radius: 0 0 50% 50%;
+      &:hover {
+        .connection__icon-main_connect-fff,
+        .connection__icon-main_connect-363636 {
+          opacity: 0;
+        }
+      }
+    }
+    .connection__icon-main_close {
+      opacity: 1;
+    }
+    .connection__icon-main_connect-fff,
+    .connection__icon-main_connect-363636 {
+      opacity: 0;
+    }
+    .connection__panel {
+      display: block;
+    }
+  }
+
+  &__open {
+    background-color: transparent;
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+    transition: $transition;
+    height: 50px;
+    width: 50px;
+    &:hover {
+      background-color: $accentColor;
+      @include respond-to(xl) {
+        background-color: transparent;
+      }
+      .connection__icon-main_connect-fff {
+        opacity: 0;
+        @include respond-to(xl) {
+          opacity: 1;
+        }
+      }
+      .connection__icon-main_connect-363636 {
+        opacity: 1;
+        @include respond-to(xl) {
+          opacity: 0;
+        }
+      }
+    }
+  }
+
+  &__icon-main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: $transition;
+    &_connect-fff, &_connect-363636 {
+      height: 20px;
+      width: 20px;
+    }
+    &_connect-363636 {
+      opacity: 0;
+    }
+    &_close {
+      height: 16px;
+      width: 16px;
+      opacity: 0;
+    }
+  }
+
+  &__panel {
+    background-color: $accentColor;
+    border-radius: 30px 30px 0 0;
+    position: absolute;
+    transition: $transition;
+    bottom: 100%;
+    left: 0;
+    width: 50px;
+    overflow: hidden;
+    display: none;
+  }
+
+  &__item {
+    display: block;
+    font-size: 0;
+    padding: 15px 0;
+    transition: $transition;
+    text-align: center;
+    &:hover {
+      background-color: #fff;
+    }
+  }
+
+  &__icon-cont {
+    display: inline-block;
+    &_teleg-363636 {
+      height: 17px;
+      width: 20px;
+    }
+    &_whatsap-363636 {
+      height: 22px;
+      width: 22px;
+    }
+    &_phone-363636 {
+      height: 16px;
+      width: 16px;
+    }
+    &_message-363636 {
+      height: 18px;
+      width: 22px;
+    }
+  }
+
+}

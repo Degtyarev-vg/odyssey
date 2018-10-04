@@ -3,13 +3,12 @@ mixin top-slider()
     +e.slider
       - let i = 1;
       each slider in topSlider
-        +e.slide(style='background:url(' + slider.img + ') center no-repeat;background-size:cover' data-dots_text=slider.header)
+        +e.slide(style='background:url(' + slider.img + ') center no-repeat;background-size:cover;' data-dots_text=slider.header)
           .grid
             +e.content
               +e.info
                 +e.counter
                   +e('span').counter-current 0!{i}
-                  | /
                   +e('span').counter-total
                 +e.texts
                   +e('h1').header !{slider.header}

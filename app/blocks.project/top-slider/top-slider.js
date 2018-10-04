@@ -5,9 +5,11 @@ $(function() {
   let topSlider = $('.top-slider__slider').slick({
     infinite: true,
     fade: true,
-    autoplay: false,
+    autoplay: true,
     speed: 300,
     autoplaySpeed: 5000,
+    pauseOnDotsHover: true,
+    pauseOnHover: true,
     slidesToShow: 1,
     swipeToSlide: false,
     swipe: false,
@@ -24,19 +26,37 @@ $(function() {
     appendArrows: $('.top-slider__arrows'),
     prevArrow: `
       <span class='top-slider__prev'>
-        <span class='icon icon_arrow-363636'></span>
         <span class='icon icon_arrow-ffffff'></span>
       </span>`,
     nextArrow: `
       <span class='top-slider__next'>
-        <span class='icon icon_arrow-363636'></span>
         <span class='icon icon_arrow-ffffff'></span>
       </span>`,
-    appendDots: $('.top-slider__dots')
+    appendDots: $('.top-slider__dots'),
+    responsive: [
+      {
+        breakpoint: 1199.9,
+        settings: {
+          swipe: true,
+          speed: 100
+        }
+      }
+    ]
   });
 
   let topSlideQuantity = topSlider.slick('getSlick').slideCount;
 
   $('.top-slider__counter-total').html('0' + topSlideQuantity);
+
+  function fullheight() {
+    $('.top-slider')
+      .css('height', $(window).height());
+  };
+
+  fullheight();
+
+  $(window).resize(function() {
+    fullheight();
+  });
 
 });

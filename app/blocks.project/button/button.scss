@@ -1,0 +1,40 @@
+// Для импорта в файл подключения: @import './app/blocks.project/button/button';
+
+@import '../../scss/vars';     // файл с переменными
+@import '../../scss/png-sprite';    // файл с png-спрайтами
+
+
+.button {
+  border: 1px solid $accentColor;
+  border-radius: 40px;
+  display: inline-block;
+  font-size: 15px;
+  line-height: 48px;
+  text-align: center;
+  text-decoration: none;
+  transition: $transition;
+  padding: 0 15px;
+  color: #434343;
+
+  &_full {
+    background-color: $accentColor;
+    &:hover {
+      background-color: #e6bb00;
+      border-color: #e6bb00;
+    }
+  }
+
+  &_border {
+    &:hover {
+      background-color: $accentColor;
+    }
+  }
+
+  &_full, &_border {
+    &:active {
+      background-color: #ffe873;
+      border-color: #ffe873;
+    }
+  }
+
+}

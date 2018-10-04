@@ -9,6 +9,10 @@ $(function() {
 
     $('.page').toggleClass('page_fixed');
 
+    $('.connection').toggleClass('connection_scroll');
+
+    $('.top-slider__slider').slick('refresh');
+
     return false;
   });
 

@@ -63,6 +63,11 @@
         opacity: 1;
       }
     } // respond
+    .top-navigation__inner {
+      @include respond-to(sm) {
+        padding-left: 0;
+      }
+    }
   } // ._open
 
   &__logo {
@@ -75,6 +80,9 @@
 
   &__inner {
     font-size: 0;
+    @include respond-to(sm) {
+      padding-left: 20px;
+    }
   }
 
   &__logo-container {
