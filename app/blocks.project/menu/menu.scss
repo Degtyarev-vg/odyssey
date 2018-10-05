@@ -75,8 +75,6 @@
           @include respond-to(xl) {
             top: auto;
             bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
           }
         }
       }
@@ -91,7 +89,7 @@
     text-decoration: none;
     position: relative;
     @include respond-to(xl) {
-      display: inline-block;
+      display: block;
       font-size: 18px;
       color: #363636;
       padding-bottom: 12px;

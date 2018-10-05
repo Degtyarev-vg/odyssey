@@ -3,7 +3,13 @@ mixin section-welcome()
     .grid
       +e.content
         +e.left
-          +e('h2').heading Добро пожаловать<br><span>на борт</span>
+          +e('h2').heading Добро пожаловать<br><span>на борт!</span>
           +e('p').text Таиланд один из самых красочных мест на планете с его живописными местами. Яхт-клуб "Одисей" откроет вам непревзойденные пейзажи этой замечательной страны.
         +e.rigth
-          //-
+          +e.img-container(style='background:url(img/section-welcome_bg.jpg) center no-repeat;background-size:cover')
+            +e.img-content
+              +e.available Доступно
+              +e('a')(href='#top-yachts').link.link-scroll 18 яхт
+                +b('span').icon._arrow-ffffff.__icon-arrow
+              +e('a')(href='#top-directions').link.link-scroll 137 маршрутов
+                +b('span').icon._arrow-ffffff.__icon-arrow

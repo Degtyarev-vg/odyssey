@@ -7,4 +7,147 @@
 .section-welcome {
   background-color: #f2f5ff;
   padding: 100px 0;
+  overflow: hidden;
+  @include respond-to(lg) {
+    padding: 75px 0;
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    @include respond-to(md) {
+      display: block;
+    }
+  }
+
+  &__left {
+    flex-shrink: 1;
+    padding-left: 50px;
+    @include respond-to(lg) {
+      padding-left: 20px;
+    }
+    @include respond-to(md) {
+      padding-left: 0;
+      margin-bottom: 35px;
+    }
+    @include respond-to(sm) {
+      padding-left: 20px;
+    }
+  }
+  &__rigth {
+    flex-basis: 650px;
+    flex-shrink: 0;
+    order: -1;
+    @include respond-to(xl) {
+      flex-basis: 500px;
+    }
+    @include respond-to(lg) {
+      flex-basis: 350px;
+    }
+    @include respond-to(sm) {
+      margin: 0 -5px;
+    }
+  }
+
+  &__heading {
+    font-family: $Circe-ExtraLight;
+    font-size: 60px;
+    font-weight: 100;
+    line-height: 1;
+    @include respond-to(lg) {
+      font-size: 18px;
+      line-height: 1.2;
+    }
+    span {
+      font-family: $Circe-ExtraBold;
+      font-weight: 800;
+      @include respond-to(lg) {
+        font-size: 30px;
+      }
+    }
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #999999;
+    margin-top: 15px;
+  }
+
+  &__img-container {
+    border-radius: 5px;
+    position: relative;
+    color: #fff;
+    @include respond-to(sm) {
+      border-radius: 0;
+    }
+    &:before {
+      content: '';
+      display: block;
+      padding-top: 76.924%;
+      height: 0;
+      @include respond-to(md) {
+        padding-top: 60%;
+      }
+      @include respond-to(smm) {
+        padding-top: 74.69%;
+      }
+    }
+  }
+  &__img-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 15px 28px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    @include respond-to(md) {
+      justify-content: flex-end;
+      padding: 15px 25px;
+    }
+  }
+
+  &__available {
+    font-size: 18px;
+    margin-top: 36px;
+    @include respond-to(xl) {
+      margin-top: 0;
+    }
+  }
+
+  &__link {
+    align-self: flex-start;
+    font-family: $Circe-ExtraBold;
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 1;
+    padding-right: 25px;
+    position: relative;
+    margin-top: 8px;
+    color: #fff;
+    text-decoration: none;
+    transition: $transition;
+    @include respond-to(md) {
+      &:first-of-type {
+        margin-top: 0;
+      }
+    }
+    &:hover {
+      opacity: .65;
+    }
+  }
+
+  &__icon-arrow {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    height: 11px;
+    width: 16px;
+  }
+
 }

@@ -2,7 +2,7 @@
   font-family: 'Circe-Bold';
   src: url('../fonts/Circe-Bold/Circe-Bold.woff2') format('woff2'),
        url('../fonts/Circe-Bold/Circe-Bold.woff') format('woff');
-  font-weight: normal;
+  font-weight: bold;
   font-style: normal;
 }
 
@@ -10,7 +10,7 @@
   font-family: 'Circe-ExtraBold';
   src: url('../fonts/Circe-ExtraBold/Circe-ExtraBold.woff2') format('woff2'),
        url('../fonts/Circe-ExtraBold/Circe-ExtraBold.woff') format('woff');
-  font-weight: normal;
+  font-weight: 800;
   font-style: normal;
 }
 
@@ -18,7 +18,7 @@
   font-family: 'Circe-ExtraLight';
   src: url('../fonts/Circe-ExtraLight/Circe-ExtraLight.woff2') format('woff2'),
   url('../fonts/Circe-ExtraLight/Circe-ExtraLight.woff') format('woff');
-  font-weight: normal;
+  font-weight: 100;
   font-style: normal;
 }
 
@@ -26,6 +26,6 @@
   font-family: 'Circe-Light';
   src: url('../fonts/Circe-Light/Circe-Light.woff2') format('woff2'),
   url('../fonts/Circe-Light/Circe-Light.woff') format('woff');
-  font-weight: normal;
+  font-weight: 200;
   font-style: normal;
 }

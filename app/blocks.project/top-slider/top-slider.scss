@@ -67,6 +67,7 @@
     display: inline-block;
     margin-right: 20px;
     font-family: $Circe-ExtraBold;
+    font-weight: 800;
     font-size: 30px;
     line-height: 1;
     color: #fff;
@@ -98,9 +99,11 @@
   &__header {
     font-family: $Circe-ExtraBold;
     font-size: 70px;
+    font-weight: 800;
     line-height: 1;
     @include respond-to(lg) {
       font-size: 40px;
+      line-height: 1.2;
     }
     @include respond-to(sm) {
       font-size: 30px;
@@ -108,11 +111,13 @@
     span {
       display: block;
       font-family: $Circe-ExtraLight;
+      font-weight: 100;
     }
   }
   &__text {
     font-family: $Circe-ExtraLight;
     font-size: 16px;
+    font-weight: 100;
     line-height: 1.5;
     margin: 15px 0;
     max-width: 635px;
@@ -289,6 +294,7 @@
   }
   &__dot-number {
     font-family: $Circe-ExtraBold;
+    font-weight: 800;
     font-size: 18px;
     line-height: 1;
     text-transform: uppercase;
