@@ -1,0 +1,29 @@
+// Для импорта в файл подключения: @import './app/blocks.project/heading/heading';
+
+@import '../../scss/vars';     // файл с переменными
+@import '../../scss/png-sprite';    // файл с png-спрайтами
+
+
+.heading {
+  font-family: $Circe-ExtraBold;
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 1;
+  @include respond-to(lg) {
+    font-size: 30px;
+    line-height: 1.2;
+  }
+  span {
+    font-family: $Circe-ExtraLight;
+    font-weight: 100;
+    @include respond-to(lg) {
+      font-size: 18px;
+    }
+  }
+  &_363636 {
+    color: #363636;
+  }
+  &_white {
+    color: #fff;
+  }
+}

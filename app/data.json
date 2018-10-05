@@ -46,5 +46,79 @@
 			"buttonText": "Подробнее",
 			"buttonLink": "#"
 		}
+	},
+	"topYachts": {
+		"item1": {
+			"img": "img/top-yachts/1.jpg",
+			"name": "Princess 45",
+			"typeIcon": "img/top-yachts/type1.svg",
+			"typeName": "Моторная яхта",
+			"personsIcon": "img/top-yachts/person.svg",
+			"personText": "До 20 человек",
+			"price": "$900"
+		},
+		"item2": {
+			"img": "img/top-yachts/2.jpg",
+			"name": "Lagoon 450",
+			"typeIcon": "img/top-yachts/type1.svg",
+			"typeName": "Парусный катамаран",
+			"personsIcon": "img/top-yachts/person.svg",
+			"personText": "До 12 человек",
+			"price": "$750"
+		},
+		"item3": {
+			"img": "img/top-yachts/3.jpg",
+			"name": "SpeadBoat 10",
+			"typeIcon": "img/top-yachts/type2.svg",
+			"typeName": "Скоростной катер",
+			"personsIcon": "img/top-yachts/person.svg",
+			"personText": "До 10 человек",
+			"price": "$500"
+		},
+		"item4": {
+			"img": "img/top-yachts/3.jpg",
+			"name": "SpeadBoat 10",
+			"typeIcon": "img/top-yachts/type2.svg",
+			"typeName": "Скоростной катер",
+			"personsIcon": "img/top-yachts/person.svg",
+			"personText": "До 10 человек",
+			"price": "$500"
+		},
+		"item5": {
+			"img": "img/top-yachts/1.jpg",
+			"name": "Princess 45",
+			"typeIcon": "img/top-yachts/type1.svg",
+			"typeName": "Моторная яхта",
+			"personsIcon": "img/top-yachts/person.svg",
+			"personText": "До 20 человек",
+			"price": "$900"
+		},
+		"item6": {
+			"img": "img/top-yachts/2.jpg",
+			"name": "Lagoon 450",
+			"typeIcon": "img/top-yachts/type1.svg",
+			"typeName": "Парусный катамаран",
+			"personsIcon": "img/top-yachts/person.svg",
+			"personText": "До 12 человек",
+			"price": "$750"
+		},
+		"item7": {
+			"img": "img/top-yachts/3.jpg",
+			"name": "SpeadBoat 10",
+			"typeIcon": "img/top-yachts/type2.svg",
+			"typeName": "Скоростной катер",
+			"personsIcon": "img/top-yachts/person.svg",
+			"personText": "До 10 человек",
+			"price": "$500"
+		},
+		"item8": {
+			"img": "img/top-yachts/3.jpg",
+			"name": "SpeadBoat 10",
+			"typeIcon": "img/top-yachts/type2.svg",
+			"typeName": "Скоростной катер",
+			"personsIcon": "img/top-yachts/person.svg",
+			"personText": "До 10 человек",
+			"price": "$500"
+		}
 	}
 }

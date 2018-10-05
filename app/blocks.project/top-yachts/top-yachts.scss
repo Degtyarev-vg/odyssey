@@ -1,0 +1,118 @@
+// Для импорта в файл подключения: @import './app/blocks.project/top-yachts/top-yachts';
+
+@import '../../scss/vars';     // файл с переменными
+@import '../../scss/png-sprite';    // файл с png-спрайтами
+
+
+.top-yachts {
+  background-color: #f2f5ff;
+  padding-top: 100px;
+  padding-bottom: 1px;
+  position: relative;
+  &:before {
+    content: '';
+    position: absolute;
+    bottom: -199px;
+    left: 0;
+    height: 200px;
+    width: 100%;
+    background: url('../img/wave.svg') center no-repeat;
+    background-size: 100% 100%;
+    @include respond-to(lg) {
+      bottom: -149px;
+      height: 150px;
+    }
+    @include respond-to(md) {
+      bottom: -99px;
+      height: 100px;
+    }
+    @include respond-to(sm) {
+      bottom: -39px;
+      height: 40px;
+    }
+  }
+  @include respond-to(lg) {
+    padding-top: 25px;
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+  }
+
+  &__heading-container {
+    flex-grow: 1;
+    overflow: hidden;
+  }
+  &__heading {
+    display: inline-block;
+    padding-right: 30px;
+    position: relative;
+    &:before {
+      content: '';
+      background-color: #dbdde3;
+      position: absolute;
+      top: 50%;
+      left: 100%;
+      transform: translateY(-50%);
+      height: 1px;
+      width: 1200px;
+    }
+  }
+
+  &__navigation {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    padding-left: 28px;
+  }
+
+  &__arrows {
+    font-size: 0;
+  }
+  &__slider-arrow {
+    &:first-of-type {
+      margin-right: 10px;
+    }
+  }
+
+  &__counter {
+    padding: 0 21px 0 24px;
+  }
+  &__counter-current {
+    display: inline-block;
+    margin-right: 20px;
+    font-family: $Circe-ExtraBold;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 1;
+    color: #363636;
+  }
+  &__counter-total {
+    font-size: 14px;
+    line-height: 1;
+    color: #b9b9b9;
+    position: relative;
+    &:before {
+      content: '/';
+      position: absolute;
+      top: 2px;
+      left: -11px;
+    }
+  }
+
+  &__button {
+    &_desk {
+      @include respond-to(md) {
+        display: none;
+      }
+    }
+    &_mobile {
+      display: none;
+      @include respond-to(md) {
+        display: inline-block;
+      }
+    }
+  }
+
+}

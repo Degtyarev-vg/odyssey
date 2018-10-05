@@ -1,0 +1,42 @@
+// Для импорта в файл подключения: @import './app/blocks.project/slider-arrow/slider-arrow';
+
+@import '../../scss/vars';     // файл с переменными
+@import '../../scss/png-sprite';    // файл с png-спрайтами
+
+
+.slider-arrow {
+  display: inline-block;
+  border-radius: 50%;
+  position: relative;
+  transition: $transition;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  opacity: .65;
+  &_363636 {
+    border: 1px solid #c5c7cc;
+  }
+  &_ffffff {
+    border: 1px solid #fff;
+  }
+  &_e6ebff {
+    border: 1px solid #e6ebff;
+  }
+  &:hover, &:active {
+    opacity: 1;
+  }
+  .icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: $transition;
+    height: 11px;
+    width: 16px;
+  }
+  &_prev {
+    .icon {
+      transform: translate(-50%, -50%) rotate(180deg);
+    }
+  }
+}

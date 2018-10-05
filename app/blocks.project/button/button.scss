@@ -37,4 +37,39 @@
     }
   }
 
+  &_arrow-border, &_arrow-full {
+    position: relative;
+    &:hover {
+      background-color: $accentColor;
+      border-color: $accentColor;
+    }
+    &:active {
+      background-color: #ffe873;
+      border-color: #ffe873;
+    }
+    .icon {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      height: 11px;
+      width: 16px;
+    }
+  }
+  &_arrow-border {
+    border-color: #ccced3;
+    padding-left: 19px;
+    padding-right: 51px;
+    .icon {
+      right: 16px;
+    }
+  }
+  &_arrow-full {
+    background-color: $accentColor;
+    padding-left: 24px;
+    padding-right: 54px;
+    .icon {
+      right: 25px;
+    }
+  }
+
 }

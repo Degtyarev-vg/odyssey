@@ -25,11 +25,11 @@ $(function() {
     arrows: true,
     appendArrows: $('.top-slider__arrows'),
     prevArrow: `
-      <span class='top-slider__prev'>
+      <span class='slider-arrow slider-arrow_ffffff slider-arrow_prev top-slider__prev'>
         <span class='icon icon_arrow-ffffff'></span>
       </span>`,
     nextArrow: `
-      <span class='top-slider__next'>
+      <span class='slider-arrow slider-arrow_ffffff slider-arrow_next top-slider__next'>
         <span class='icon icon_arrow-ffffff'></span>
       </span>`,
     appendDots: $('.top-slider__dots'),
