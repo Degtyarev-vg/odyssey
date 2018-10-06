@@ -6,14 +6,29 @@
 
 .top-yacht {
   position: relative;
-  //height: 400px;
-  //width: 590px;
-  max-width: 590px;
+  overflow: hidden;
   &:before {
     content: '';
     display: block;
     padding-top: 67.798%;
     height: 0;
+  }
+  &:hover {
+    .top-yacht__overlay {
+      filter: blur(3px);
+    }
+    .top-yacht__hover {
+      opacity: 1;
+    }
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transition: $transition;
   }
 
   &__content {
@@ -21,12 +36,16 @@
     flex-direction: column;
     justify-content: flex-end;
     color: #fff;
-    padding: 20px 30px;
+    padding: 17px 30px;
     position: absolute;
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
+    @include respond-to(lg) {
+      justify-content: space-between;
+      padding: 20px 25px 17px;
+    }
   }
 
   &__name {
@@ -34,12 +53,20 @@
     font-size: 24px;
     font-weight: bold;
     line-height: 1;
+    @include respond-to(lg) {
+      font-size: 18px;
+    }
   }
 
   &__info {
-    padding-bottom: 20px;
+    padding-bottom: 19px;
     position: relative;
-    margin: 18px 0;
+    margin: 16px 0 20px;
+    @include respond-to(lg) {
+      padding-bottom: 0;
+      padding-right: 85px;
+      margin: 15px 0 0 0;
+    }
     &:before {
       content: '';
       background-color: rgba(255, 255, 255, .3);
@@ -48,12 +75,18 @@
       left: 0;
       height: 1px;
       width: 50px;
+      @include respond-to(lg) {
+        display: none;
+      }
     }
   }
   &__info-item {
     display: flex;
     align-items: center;
-    margin-top: 10px;
+    margin-top: 11px;
+    @include respond-to(lg) {
+      margin-top: 5px;
+    }
     &:first-of-type {
       margin-top: 0;
     }
@@ -62,6 +95,15 @@
     flex-basis: 31px;
     flex-shrink: 0;
     text-align: center;
+    @include respond-to(lg) {
+      flex-basis: 25px;
+    }
+    img {
+      display: inline-block !important;
+      @include respond-to(lg) {
+        max-height: 15px;
+      }
+    }
   }
   &__info-name {
     font-size: 14px;
@@ -70,13 +112,72 @@
   }
 
   &__price-container {
-
+    @include respond-to(lg) {
+      position: absolute;
+      right: 15px;
+      bottom: 16px;
+    }
   }
   &__price {
     font-family: $Circe-ExtraBold;
     font-size: 24px;
     font-weight: 800;
     line-height: 1;
+    @include respond-to(lg) {
+      background-color: $accentColor;
+      border-radius: 40px;
+      display: inline-block;
+      font-size: 16px;
+      padding: 19px 22px 15px;
+      color: #363636;
+    }
+  }
+
+  &__hover {
+    background-color: rgba(0, 0, 0, .3);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+    transition: $transition;
+    text-decoration: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    overflow: hidden;
+    opacity: 0;
+  }
+  &__btn-hover {
+    background-color: $accentColor;
+    border-radius: 50%;
+    display: inline-block;
+    transition: $transition;
+    height: 50px;
+    width: 50px;
+    position: relative;
+    &:hover {
+      background-color: #ffe873;
+    }
+    .icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      height: 11px;
+      width: 16px;
+    }
+  }
+  &__hover-text {
+    font-family: $Circe-Bold;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1;
+    color: #fff;
+    margin-top: 15px;
   }
 
 }

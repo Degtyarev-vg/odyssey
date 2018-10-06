@@ -6,13 +6,9 @@ mixin top-yachts()
           +b('h2').heading._363636.__heading <span>Топ популярных </span>яхт на Пхукете
         +e.navigation
           +e.arrows
-            +b('span').slider-arrow._363636._prev.__slider-arrow
-              +b('span').icon._arrow-363636
-            +b('span').slider-arrow._363636._next.__slider-arrow
-              +b('span').icon._arrow-363636
           +e.counter
             +e('span').counter-current 01
-            +e('span').counter-total 02
+            +e('span').counter-total
           +b('a')(href='#').button._arrow-border.__button._desk Все яхты
             +b('span').icon._arrow-363636
 
@@ -20,20 +16,25 @@ mixin top-yachts()
         +e.slider
           each yacht in topYachts
             +e.item
-              +b.top-yacht(style='background:url(' + yacht.img + ') center no-repeat;background-size:cover;')
-                +e.content
-                  +e('h4').name !{yacht.name}
-                  +e.info
-                    +e.info-item
-                      +e.info-icon-container
-                        +e('img')(src=yacht.typeIcon alt='Тип яхты').info-icon
-                      +e.info-name !{yacht.typeName}
-                    +e.info-item
-                      +e.info-icon-container
-                        +e('img')(src=yacht.personsIcon alt='Количество человек').info-icon
-                      +e.info-name !{yacht.personText}
-                  +e.price-container
-                    +e.price !{yacht.price}
+              +b.top-yacht
+                +e.overlay(style='background:url(' + yacht.img + ') center no-repeat;background-size:cover;')
+                  +e.content
+                    +e('h4').name !{yacht.name}
+                    +e.info
+                      +e.info-item
+                        +e.info-icon-container
+                          +e('img')(src=yacht.typeIcon alt='Тип яхты').info-icon
+                        +e.info-name !{yacht.typeName}
+                      +e.info-item
+                        +e.info-icon-container
+                          +e('img')(src=yacht.personsIcon alt='Количество человек').info-icon
+                        +e.info-name !{yacht.personText}
+                    +e.price-container
+                      +e.price !{yacht.price}
+                +e('a')(href='#').hover
+                  +e.btn-hover
+                    +b('span').icon._arrow-363636
+                  +e.hover-text Узнать подробнее
 
         +b('a')(href='#').button._arrow-full.__button._mobile Все яхты
           +b('span').icon._arrow-363636

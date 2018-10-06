@@ -7,37 +7,42 @@
 .top-yachts {
   background-color: #f2f5ff;
   padding-top: 100px;
-  padding-bottom: 1px;
   position: relative;
   &:before {
     content: '';
     position: absolute;
-    bottom: -199px;
+    top: calc(100% - 1px);
     left: 0;
     height: 200px;
     width: 100%;
     background: url('../img/wave.svg') center no-repeat;
     background-size: 100% 100%;
     @include respond-to(lg) {
-      bottom: -149px;
       height: 150px;
     }
     @include respond-to(md) {
-      bottom: -99px;
-      height: 100px;
+      height: 70px;
     }
     @include respond-to(sm) {
-      bottom: -39px;
-      height: 40px;
+      height: 36px;
     }
   }
   @include respond-to(lg) {
     padding-top: 25px;
   }
+  @include respond-to(md) {
+    text-align: center;
+  }
 
   &__top {
     display: flex;
     align-items: center;
+    @include respond-to(xl) {
+      display: block;
+    }
+    @include respond-to(md) {
+      text-align: left;
+    }
   }
 
   &__heading-container {
@@ -48,6 +53,16 @@
     display: inline-block;
     padding-right: 30px;
     position: relative;
+    @include respond-to(xl) {
+      display: block;
+      padding-right: 0;
+    }
+    @include respond-to(sm) {
+      padding-left: 20px;
+      span {
+        display: block;
+      }
+    }
     &:before {
       content: '';
       background-color: #dbdde3;
@@ -57,6 +72,9 @@
       transform: translateY(-50%);
       height: 1px;
       width: 1200px;
+      @include respond-to(xl) {
+        display: none;
+      }
     }
   }
 
@@ -65,6 +83,14 @@
     flex-shrink: 0;
     align-items: center;
     padding-left: 28px;
+    @include respond-to(xl) {
+      justify-content: center;
+      padding-left: 0;
+      margin-top: 25px;
+    }
+    @include respond-to(md) {
+      display: none;
+    }
   }
 
   &__arrows {
@@ -111,6 +137,42 @@
       display: none;
       @include respond-to(md) {
         display: inline-block;
+        margin-top: 20px;
+      }
+    }
+  }
+
+  &__bottom {
+    margin-top: 26px;
+    @include respond-to(md) {
+      margin-top: 12px;
+    }
+  }
+
+  &__slider {
+    margin: 0 -5px;
+    @include respond-to(md) {
+      text-align: left;
+      margin: 0;
+    }
+    @include respond-to(sm) {
+      margin: 0 -5px;
+    }
+  }
+
+  &__item {
+    margin-top: 10px;
+    &:first-of-type {
+      margin-top: 0;
+    }
+  }
+
+  .slick-slide {
+    padding: 0 5px;
+    > div {
+      font-size: 0;
+      &:first-of-type {
+        margin-bottom: 10px;
       }
     }
   }
