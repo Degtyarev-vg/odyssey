@@ -21,6 +21,63 @@
 			"link": "#"
 		}
 	},
+	"topDirections": {
+		"item1": {
+			"img": "img/top-directions/1.jpg",
+			"heading": "Острова Пхи-Пхи",
+			"countIslands": "5 островов",
+			"islands": [
+				"Снорклинг",
+				"Фильм \"Пляж\"",
+				"Обезьяны",
+				"Тайская Ибица"
+			]
+		},
+		"item2": {
+			"img": "img/top-directions/2.jpg",
+			"heading": "Залив Пханг-Нга",
+			"countIslands": "5 островов",
+			"islands": [
+				"Джеймс Бонд",
+				"Обезьяны",
+				"Каяки",
+				"Пещеры",
+				"Аватар"
+			]
+		},
+		"item3": {
+			"img": "img/top-directions/3.jpg",
+			"heading": "Архипелаг Кхай",
+			"countIslands": "5 островов",
+			"islands": [
+				"Watersports",
+				"Кафе в скале",
+				"Снорклинг"
+			]
+		},
+		"item4": {
+			"img": "img/top-directions/4.jpg",
+			"heading": "Симиланские острова",
+			"countIslands": "7 островов",
+			"islands": [
+				"Белый песок",
+				"Необитаемость",
+				"Скала \"Парус\"",
+				"Снорклинг"
+			]
+		},
+		"item5": {
+			"img": "img/top-directions/5.jpg",
+			"heading": "Острова Краби",
+			"countIslands": "11 островов",
+			"islands": [
+				"Мангры",
+				"Фильм \"Джунгли\"",
+				"Лагуна",
+				"Летучие мыши"
+			]
+		}
+	},
 	"topSlider": {
 		"slide1": {
 			"img": "img/top-slider/1.jpg",

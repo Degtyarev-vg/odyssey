@@ -1,0 +1,34 @@
+mixin top-directions()
+  +b('section').top-directions&attributes(attributes)
+    .grid
+      +e.top
+        +e.heading-container
+          +b('h2').heading._363636.__heading <span>Популярные </span>направления
+        +e.button-container
+          +b('a')(href='#').button._arrow-border.__button._desk Все яхты
+            +b('span').icon._arrow-363636
+
+      +e.bottom
+        +e.slider-wrapper
+          +e.slider
+            each direction in topDirections
+              +e.item(data-bg=direction.img)
+                +b('a')(href='#' style='background:url(' + direction.img + ') center no-repeat;').top-derection.__top-derection
+                  +e('h4').heading !{direction.heading}
+                  +e.count-islands !{direction.countIslands}
+                    +b('span').icon._palm-ffffff
+                  +e('ul').programs
+                    each program in direction.islands
+                      +e('li').program !{program}
+          +e('a')(href='#' style='background:url(img/top-directions/6.jpg) center no-repeat;background-size:cover;').all-directions
+            +e.all-directions-see Смотреть все
+            +e.all-directions-ways 18 направлений
+            +e.all-directions-btn
+              +b('span').icon._arrow-363636
+          +e.prev-slide._1
+          +e.prev-slide._2
+          +e('span').shadow
+        +e.dots-container
+
+      +b('a')(href='#').button._arrow-full.__button._mobile Все направления
+        +b('span').icon._arrow-363636

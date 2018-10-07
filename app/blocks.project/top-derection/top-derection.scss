@@ -1,0 +1,100 @@
+// Для импорта в файл подключения: @import './app/blocks.project/top-derection/top-derection';
+
+@import '../../scss/vars';     // файл с переменными
+@import '../../scss/png-sprite';    // файл с png-спрайтами
+
+
+.top-derection {
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  text-align: left;
+  text-decoration: none;
+  transition: $transition;
+  padding: 20px 30px 30px;
+  color: #fff;
+  background-size: cover !important;
+  @include respond-to(xl) {
+    padding: 18px 20px;
+  }
+  &:hover {
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, .3);
+    transform: scale(1.02);
+    @include respond-to(md) {
+      box-shadow: none;
+      transform: scale(1);
+    }
+  }
+
+  &__heading {
+    font-family: $Circe-ExtraBold;
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 1.2;
+    padding-bottom: 18px;
+    position: relative;
+    margin-bottom: 23px;
+    @include respond-to(xl) {
+      font-size: 18px;
+      padding-bottom: 10px;
+      margin-bottom: 10px;
+    }
+    &:before {
+      content: '';
+      background-color: rgba(255, 255, 255, .3);
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 1px;
+      width: 50px;
+    }
+  }
+
+  &__count-islands {
+    display: inline-block;
+    font-size: 18px;
+    line-height: 1;
+    padding-left: 26px;
+    position: relative;
+    .icon {
+      position: absolute;
+      top: -2px;
+      left: 0;
+      height: 18px;
+      width: 15px;
+      opacity: .5;
+    }
+  }
+
+  &__programs {
+    font-size: 0;
+    overflow: hidden;
+    margin: 5px -20px 0;
+  }
+  &__program {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 1;
+    margin-top: 8px;
+    padding: 0 20px;
+    position: relative;
+    &:first-of-type {
+      &:before {
+        display: none;
+      }
+    }
+    &:before {
+      content: '';
+      background-color: rgba(255, 255, 255, .5);
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      left: -4px;
+      transform: translateY(-50%);
+      height: 4px;
+      width: 4px;
+    }
+  }
+
+}
