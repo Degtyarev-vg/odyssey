@@ -16,9 +16,15 @@
   &:hover {
     .top-yacht__overlay {
       filter: blur(3px);
+      @include respond-to(md) {
+        filter: blur(0);
+      }
     }
     .top-yacht__hover {
       opacity: 1;
+      @include respond-to(md) {
+        opacity: 0;
+      }
     }
   }
 

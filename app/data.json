@@ -21,6 +21,44 @@
 			"link": "#"
 		}
 	},
+	"sectionRest": {
+		"item1": {
+			"imgDesktop": "img/section-rest/1_desk.svg",
+			"imgMobile": "img/section-rest/1_mob.svg",
+			"title": "Индивидуальная программа",
+			"text": "Программу и формат отдыха выбираете вы сами и не подстраиваетесь под групповой тур"
+		},
+		"item2": {
+			"imgDesktop": "img/section-rest/2_desk.svg",
+			"imgMobile": "img/section-rest/2_mob.svg",
+			"title": "Транспорт",
+			"text": "Мы уже позаботились о том, как доставить вас от отеля до яхты и обратно"
+		},
+		"item3": {
+			"imgDesktop": "img/section-rest/3_desk.svg",
+			"imgMobile": "img/section-rest/3_mob.svg",
+			"title": "Безопастность и комфорт",
+			"text": "Опытный экипаж позаботится о вашей безопастности и комфорте на борту"
+		},
+		"item4": {
+			"imgDesktop": "img/section-rest/4_desk.svg",
+			"imgMobile": "img/section-rest/4_mob.svg",
+			"title": "Персональный гид",
+			"text": "Говорящий на русском языке гид сделает  приключение еще интереснее"
+		},
+		"item5": {
+			"imgDesktop": "img/section-rest/5_desk.svg",
+			"imgMobile": "img/section-rest/5_mob.svg",
+			"title": "Маски и трубки",
+			"text": "Обеспечим вас всем необходимым для снорклинга"
+		},
+		"item6": {
+			"imgDesktop": "img/section-rest/6_desk.svg",
+			"imgMobile": "img/section-rest/6_mob.svg",
+			"title": "Сделайте заказ, а мы доставим",
+			"text": "Купим и привезем на борт все, что вы захотите добавить"
+		}
+	},
 	"topDirections": {
 		"item1": {
 			"img": "img/top-directions/1.jpg",

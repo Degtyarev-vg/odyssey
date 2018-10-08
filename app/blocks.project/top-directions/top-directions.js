@@ -56,9 +56,9 @@ $(window).on('load resize', function() {
 
     });
 
-    $('.top-directions__prev-slide_1').css({'background':'url(' + $('.top-directions__item:nth-child(3)').data('bg') + ') center no-repeat', 'background-size':'cover'});
+    $('.top-directions__prev-slide_1').css({'background':'url(' + $('.top-directions__item:nth-child(2)').data('bg') + ') center no-repeat', 'background-size':'cover'});
 
-    $('.top-directions__prev-slide_2').css({'background':'url(' + $('.top-directions__item:nth-child(4)').data('bg') + ') center no-repeat', 'background-size':'cover'});
+    $('.top-directions__prev-slide_2').css({'background':'url(' + $('.top-directions__item:nth-child(3)').data('bg') + ') center no-repeat', 'background-size':'cover'});
 
   }
 

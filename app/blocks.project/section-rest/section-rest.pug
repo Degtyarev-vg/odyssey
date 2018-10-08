@@ -1,0 +1,14 @@
+mixin section-rest()
+  +b('section').section-rest&attributes(attributes)
+    .grid
+      +b('h2').heading._363636.__heading <span>Ваш отдых на яхте </span>действительно запомнится!
+      +e.content
+        each item in sectionRest
+          +e.item
+            +e.img-container
+              +e('img')(src=item.imgDesktop alt=item.title).img._desk
+              +e('img')(src=item.imgMobile alt=item.title).img._mob
+            +e.text-container
+              +e('h4').title !{item.title}
+              +e('p').text !{item.text}
+        +e('img')(src='img/section-rest_bg.jpg' alt='Отдых на яхте').img-bg
