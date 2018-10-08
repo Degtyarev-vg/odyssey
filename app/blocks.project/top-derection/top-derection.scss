@@ -19,11 +19,11 @@
     padding: 18px 20px;
   }
   &:hover {
-    box-shadow: 0 0 20px 0 rgba(0, 0, 0, .3);
-    transform: scale(1.02);
+    box-shadow: 0 4px 24px 0 rgba(0, 0, 0, .12);
+    transform: translateY(-4px);
     @include respond-to(md) {
       box-shadow: none;
-      transform: scale(1);
+      transform: translateY(0);
     }
   }
 

@@ -1,0 +1,17 @@
+mixin section-reviews()
+  +b('section').section-reviews&attributes(attributes)
+    .grid
+      +e.content
+        +e.left
+          +b('h2').heading._363636.__heading._mob <span>Отзывы и морские </span>истории наших клиентов
+          +e('img')(src='img/reviews/review-img.jpg' alt='Отзывы').review-img
+        +e.right
+          +b('h2').heading._363636.__heading._desk <span>Отзывы и морские </span>истории наших клиентов
+          +e.slider
+            each review in reviews
+              +b.review.__review
+                +e.top
+                  +e.avatar(style='background:url(' + review.avatar + ') center no-repeat;background-size:cover')
+                  +e.info
+                    +e('a')(href='#' target='_blank').name !{review.name}
+                    +e.city !{review.city}

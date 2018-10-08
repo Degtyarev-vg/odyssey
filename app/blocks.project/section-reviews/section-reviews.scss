@@ -1,0 +1,106 @@
+// Для импорта в файл подключения: @import './app/blocks.project/section-reviews/section-reviews';
+
+@import '../../scss/vars';     // файл с переменными
+@import '../../scss/png-sprite';    // файл с png-спрайтами
+
+
+.section-reviews {
+  background-color: #fff;
+  padding: 200px 0;
+  position: relative;
+  @include respond-to(lg) {
+    padding: 150px 0;
+  }
+  @include respond-to(md) {
+    padding: 100px 0 70px;
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 200px;
+    width: 100%;
+    background: url('../img/wave_section-rest.svg') bottom left no-repeat;
+    background-size: 100% 100%;
+    @include respond-to(lg) {
+      height: 150px;
+    }
+    @include respond-to(md) {
+      height: 70px;
+    }
+    @include respond-to(sm) {
+      height: 40px;
+    }
+  }
+
+  &__content {
+    font-size: 0;
+    @include respond-to(sm) {
+      margin: 0 -5px;
+    }
+  }
+  &__left, &__right {
+    display: inline-block;
+    vertical-align: top;
+    @include respond-to(lg) {
+      display: block;
+    }
+  }
+  &__left {
+    width: calc(100% - 600px);
+    @include respond-to(xl) {
+      width: calc(100% - 500px);
+    }
+    @include respond-to(lg) {
+      text-align: center;
+      margin-bottom: 30px;
+      width: 100%;
+    }
+  }
+  &__right {
+    width: 600px;
+    padding-left: 60px;
+    @include respond-to(xl) {
+      width: 500px;
+      padding-left: 30px;
+    }
+    @include respond-to(lg) {
+      width: 100%;
+      padding-left: 0;
+    }
+    @include respond-to(sm) {
+      padding: 0 25px;
+    }
+  }
+
+  &__review-img {
+    border-radius: 5px;
+    @include respond-to(sm) {
+      border-radius: 0;
+    }
+  }
+
+  &__heading {
+    span {
+      display: block;
+    }
+    &_desk {
+      @include respond-to(lg) {
+        display: none;
+      }
+    }
+    &_mob {
+      display: none;
+      @include respond-to(lg) {
+        display: block;
+        text-align: left;
+        margin-bottom: 20px;
+      }
+      @include respond-to(sm) {
+        padding: 0 5px 0 25px;
+      }
+    }
+  }
+
+}

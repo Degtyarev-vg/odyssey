@@ -25,7 +25,7 @@ $(window).on('load resize', function() {
       mobileFirst: true,
       responsive: [
         {
-          breakpoint: 768,
+          breakpoint: 767.9,
           settings: 'unslick'
         }
       ]
