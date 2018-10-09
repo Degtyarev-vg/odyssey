@@ -14,4 +14,10 @@ mixin section-reviews()
                   +e.avatar(style='background:url(' + review.avatar + ') center no-repeat;background-size:cover')
                   +e.info
                     +e('a')(href='#' target='_blank').name !{review.name}
+                      +b('span')(class='icon' + ((review.socialIcon === 'fb') ? '_fb-review' : ((review.socialIcon === 'vk') ? '_vk-review' : ((review.socialIcon === 'instagram') ? '_instagram-review' : ''))) )
                     +e.city !{review.city}
+                +e('p').text !{review.text}
+          +e.navigation
+            +b('a')(href='#').button._full.__button Все отзывы
+            +e.arrows
+            +e.dots

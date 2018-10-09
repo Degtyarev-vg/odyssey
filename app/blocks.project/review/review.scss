@@ -5,5 +5,79 @@
 
 
 .review {
-  
+
+  &__top {
+    display: flex;
+    align-items: center;
+  }
+
+  &__avatar {
+    border-radius: 50%;
+    flex-basis: 60px;
+    flex-shrink: 0;
+    height: 60px;
+    width: 60px;
+  }
+
+  &__info {
+    padding-left: 21px;
+  }
+  &__name {
+    display: inline-block;
+    font-family: $Circe-Bold;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1;
+    padding-right: 25px;
+    position: relative;
+    color: #363636;
+    text-decoration: none;
+    transition: $transition;
+    &:hover {
+      color: $accentColor;
+    }
+    .icon {
+      position: absolute;
+      top: -3px;
+      right: 0;
+      height: 16px;
+      width: 16px;
+    }
+  }
+  &__city {
+    display: block;
+    font-size: 14px;
+    line-height: 1;
+    color: #999999;
+    margin-top: 3px;
+  }
+
+  &__text {
+    font-family: $Circe-ExtraLight;
+    font-size: 16px;
+    font-weight: 100;
+    line-height: 1.5;
+    color: #363636;
+    margin: 17px 0 24px 30px;
+    padding-left: 50px;
+    position: relative;
+    @include respond-to(sm) {
+      margin: 15px 0;
+      padding-left: 0;
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      height: 100%;
+      width: 1px;
+      background-color: #e8e8e8;
+      @include respond-to(sm) {
+        display: none;
+      }
+    }
+  }
+
 }

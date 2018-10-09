@@ -13,7 +13,7 @@ mixin top-slider()
                 +e.texts
                   +e('h1').header !{slider.header}
                   +e('p').text !{slider.text}
-                  +b('a')(href=slider.buttonLink)(class='' + ((slider.buttonScroll) ? 'link-scroll' : '') ).button._full.__button !{slider.buttonText}
+                  +b('a')(href=slider.buttonLink class='' + ((slider.buttonScroll) ? 'link-scroll' : '') ).button._full.__button !{slider.buttonText}
         - i++;
     +e.navigation
       .grid
