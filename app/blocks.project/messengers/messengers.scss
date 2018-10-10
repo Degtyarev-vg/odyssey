@@ -1,0 +1,128 @@
+// Для импорта в файл подключения: @import './app/blocks.project/messengers/messengers';
+
+@import '../../scss/vars';     // файл с переменными
+@import '../../scss/png-sprite';    // файл с png-спрайтами
+
+
+.messengers {
+  font-size: 0;
+
+  &__heading {
+    font-family: $Circe-ExtraBold;
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 1.2;
+    color: #fff;
+    margin-bottom: 20px;
+    @include respond-to(md) {
+      font-family: $Circe-Bold;
+      font-size: 16px;
+      font-weight: bold;
+      line-height: 1.5;
+      margin-bottom: 16px;
+    }
+    span {
+      display: block;
+      font-family: $Circe-Light;
+      font-weight: 200;
+    }
+  }
+
+  &__item {
+    background-color: rgba(255, 255, 255, .3);
+    border-radius: 50%;
+    display: inline-block;
+    text-decoration: none;
+    transition: $transition;
+    position: relative;
+    margin-right: 10px;
+    height: 60px;
+    width: 60px;
+    @include respond-to(md) {
+      background-color: transparent;
+      border: 1px solid rgba(255, 255, 255, .2);
+      height: 54px;
+      width: 54px;
+    }
+    &:last-of-type {
+      margin-right: 0;
+    }
+    &:hover, &:focus {
+      border-color: transparent;
+    }
+    .icon {
+      display: inline-block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    &_telegram {
+      &:hover {
+        background-color: #0088cc;
+      }
+      &:focus {
+        background-color: #0090d9;
+      }
+      .icon {
+        height: 17px;
+        width: 20px;
+      }
+    }
+
+    &_whatsapp {
+      &:hover {
+        background-color: #25d366;
+      }
+      &:focus {
+        background-color: #28e06c;
+      }
+      .icon {
+        height: 22px;
+        width: 22px;
+      }
+    }
+
+    &_viber {
+      &:hover {
+        background-color: #8f5db7;
+      }
+      &:focus {
+        background-color: #9964c4;
+      }
+      .icon {
+        height: 22px;
+        width: 20px;
+      }
+    }
+
+    &_vk {
+      &:hover {
+        background-color: #45668e;
+      }
+      &:focus {
+        background-color: #4c709c;
+      }
+      .icon {
+        height: 11px;
+        width: 20px;
+      }
+    }
+
+    &_messenger {
+      &:hover {
+        background-color: #0084ff;
+      }
+      &:focus {
+        background-color: #1990ff;
+      }
+      .icon {
+        height: 22px;
+        width: 22px;
+      }
+    }
+
+  }
+
+}

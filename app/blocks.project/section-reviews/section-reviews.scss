@@ -23,7 +23,7 @@
     width: 100%;
     background: url('../img/wave_section-rest.svg') bottom left no-repeat;
     background-size: 100% 100%;
-    @include respond-to(lg) {
+    /*@include respond-to(lg) {
       height: 150px;
     }
     @include respond-to(md) {
@@ -31,6 +31,9 @@
     }
     @include respond-to(sm) {
       height: 40px;
+    }*/
+    @include respond-to(lg) {
+      display: none;
     }
   }
 

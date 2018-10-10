@@ -1,0 +1,81 @@
+// Для импорта в файл подключения: @import './app/blocks.project/section-form/section-form';
+
+@import '../../scss/vars';     // файл с переменными
+@import '../../scss/png-sprite';    // файл с png-спрайтами
+
+
+.section-form {
+  background: url('../img/section-form_bg.jpg') center no-repeat;
+  background-size: cover;
+  padding: 200px 0 100px;
+  position: relative;
+  text-align: center;
+  @include respond-to(lg) {
+    //padding: 150px 0 100px;
+    padding: 100px 0;
+  }
+  @include respond-to(md) {
+    //padding: 100px 10px 50px;
+    padding: 50px 10px 50px;
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: 0;
+    height: 200px;
+    width: 100%;
+    background: url('../img/wave.svg');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: 100% 100%;
+    /*@include respond-to(lg) {
+      height: 150px;
+    }
+    @include respond-to(md) {
+      height: 70px;
+    }
+    @include respond-to(sm) {
+      height: 36px;
+    }*/
+    @include respond-to(lg) {
+      display: none;
+    }
+  }
+  /*&:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, .2);
+  }*/
+
+  .grid {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__heading {
+    span {
+      display: block;
+    }
+  }
+
+  &__callback-form {
+    max-width: 590px;
+    margin: 31px 0 55px;
+    width: 100%;
+    @include respond-to(md) {
+      margin: 15px 0 55px;
+    }
+  }
+
+  &__messengers {
+    @include respond-to(md) {
+      margin: 0 -10px;
+    }
+  }
+
+}

@@ -256,7 +256,6 @@
     transition: $transition;
     padding: 20px 20px 20px 30px;
     color: #fff;
-    opacity: .5;
     height: 290px;
     width: 290px;
     position: absolute;
@@ -277,9 +276,8 @@
       display: none;
     }
     &:hover {
-      box-shadow: 0 4px 24px 0 rgba(0, 0, 0, .12);
+      box-shadow: 0 4px 24px 0 rgba(0, 0, 0, .5);
       transform: translateY(-4px);
-      opacity: 1;
       @include respond-to(md) {
         box-shadow: none;
         transform: translateY(0);
@@ -357,7 +355,7 @@
     }
   }
 
-  &__shadow {
+  /*&__shadow {
     display: none;
     @include respond-to(md) {
       background-color: transparent;
@@ -371,11 +369,11 @@
       left: 20px;
       z-index: -1;
     }
-  }
+  }*/
 
   &__dots-container {
     display: none;
-    margin-top: 31px;
+    margin-top: 20px;
     @include respond-to(md) {
       display: block;
       ul {

@@ -17,7 +17,7 @@
     width: 100%;
     background: url('../img/wave.svg') center no-repeat;
     background-size: 100% 100%;
-    @include respond-to(lg) {
+    /*@include respond-to(lg) {
       height: 150px;
     }
     @include respond-to(md) {
@@ -25,10 +25,14 @@
     }
     @include respond-to(sm) {
       height: 36px;
+    }*/
+    @include respond-to(lg) {
+      display: none;
     }
   }
   @include respond-to(lg) {
     padding-top: 25px;
+    padding-bottom: 50px; /**/
   }
   @include respond-to(md) {
     text-align: center;

@@ -13,7 +13,7 @@ $(function() {
     slidesToShow: 1,
     swipeToSlide: true,
     swipe: true,
-    adaptiveHeight: true,
+    adaptiveHeight: false,
     dots: true,
     arrows: true,
     appendArrows: $('.section-reviews__arrows'),
@@ -25,16 +25,7 @@ $(function() {
       <span class='slider-arrow slider-arrow_363636 slider-arrow_next section-reviews__next'>
         <span class='icon icon_arrow-363636'></span>
       </span>`,
-    appendDots: $('.section-reviews__dots'),
-    /*responsive: [
-      {
-        breakpoint: 1199.9,
-        settings: {
-          arrows: false,
-          dots: true
-        }
-      }
-    ]*/
+    appendDots: $('.section-reviews__dots')
   });
 
 });

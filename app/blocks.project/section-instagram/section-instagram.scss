@@ -1,0 +1,291 @@
+// Для импорта в файл подключения: @import './app/blocks.project/section-instagram/section-instagram';
+
+@import '../../scss/vars';     // файл с переменными
+@import '../../scss/png-sprite';    // файл с png-спрайтами
+
+
+.section-instagram {
+  background-color: #f2f5ff;
+  position: relative;
+  @include respond-to(xl) {
+    padding: 30px 0;
+    text-align: center;
+  }
+
+  &__content {
+    padding-top: 133px;
+    position: relative;
+    height: 640px;
+    @include respond-to(xl) {
+      padding-top: 0;
+      height: auto;
+    }
+  }
+
+  &__heading {
+    margin: 50px 0 25px;
+    @include respond-to(xl) {
+      margin: 27px 0;
+    }
+    span {
+      display: block;
+    }
+  }
+
+  &__text {
+    font-family: $Circe-Light;
+    font-size: 16px;
+    font-weight: 200;
+    line-height: 1.5;
+    color: #999999;
+    max-width: 370px;
+    @include respond-to(xl) {
+      margin-top: 12px;
+      max-width: 100%;
+    }
+  }
+
+  &__profile {
+    display: inline-block;
+    font-family: $Circe-ExtraBold;
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 1;
+    padding-left: 44px;
+    position: relative;
+    color: #363636;
+    margin: 35px 0;
+    text-decoration: none;
+    transition: $transition;
+    @include respond-to(xl) {
+      margin: 23px 0;
+    }
+    &:hover {
+      color: $accentColor;
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      height: 30px;
+      width: 30px;
+      background: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20height%3D%2230%22%20width%3D%2230%22%3E%3ClinearGradient%20gradientTransform%3D%22matrix(1.875%200%200%20-1.875%2089.004%201216.23)%22%20y2%3D%22647.192%22%20x2%3D%22-32.933%22%20y1%3D%22634.121%22%20x1%3D%22-46.004%22%20gradientUnits%3D%22userSpaceOnUse%22%20id%3D%22a%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%23ffc107%22%2F%3E%3Cstop%20offset%3D%22.507%22%20stop-color%3D%22%23f44336%22%2F%3E%3Cstop%20offset%3D%22.99%22%20stop-color%3D%22%239c27b0%22%2F%3E%3C%2FlinearGradient%3E%3Cpath%20d%3D%22M20.625%200H9.375C4.198%200%200%204.198%200%209.375v11.25C0%2025.802%204.198%2030%209.375%2030h11.25C25.802%2030%2030%2025.802%2030%2020.625V9.375C30%204.198%2025.802%200%2020.625%200zm6.563%2020.625a6.57%206.57%200%200%201-6.563%206.563H9.375a6.57%206.57%200%200%201-6.563-6.563V9.375a6.57%206.57%200%200%201%206.563-6.563h11.25a6.57%206.57%200%200%201%206.563%206.563z%22%20fill%3D%22url(%23a)%22%2F%3E%3ClinearGradient%20gradientTransform%3D%22matrix(1.875%200%200%20-1.875%2089.004%201216.23)%22%20y2%3D%22643.485%22%20x2%3D%22-36.64%22%20y1%3D%22637.828%22%20x1%3D%22-42.297%22%20gradientUnits%3D%22userSpaceOnUse%22%20id%3D%22b%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%23ffc107%22%2F%3E%3Cstop%20offset%3D%22.507%22%20stop-color%3D%22%23f44336%22%2F%3E%3Cstop%20offset%3D%22.99%22%20stop-color%3D%22%239c27b0%22%2F%3E%3C%2FlinearGradient%3E%3Cpath%20d%3D%22M15%207.5a7.5%207.5%200%201%200%200%2015%207.5%207.5%200%200%200%200-15zm0%2012.188A4.694%204.694%200%200%201%2010.312%2015%204.693%204.693%200%200%201%2015%2010.312%204.693%204.693%200%200%201%2019.688%2015%204.694%204.694%200%200%201%2015%2019.688z%22%20fill%3D%22url(%23b)%22%2F%3E%3ClinearGradient%20gradientTransform%3D%22matrix(1.875%200%200%20-1.875%2089.004%201216.23)%22%20y2%3D%22645.333%22%20x2%3D%22-34.792%22%20y1%3D%22644.579%22%20x1%3D%22-35.546%22%20gradientUnits%3D%22userSpaceOnUse%22%20id%3D%22c%22%3E%3Cstop%20offset%3D%220%22%20stop-color%3D%22%23ffc107%22%2F%3E%3Cstop%20offset%3D%22.507%22%20stop-color%3D%22%23f44336%22%2F%3E%3Cstop%20offset%3D%22.99%22%20stop-color%3D%22%239c27b0%22%2F%3E%3C%2FlinearGradient%3E%3Ccircle%20r%3D%22.999%22%20cy%3D%226.938%22%20cx%3D%2223.063%22%20fill%3D%22url(%23c)%22%2F%3E%3C%2Fsvg%3E') center no-repeat;
+      background-size: contain;
+    }
+  }
+
+  &__button {
+    width: 150px;
+  }
+
+  &__container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 640px;
+    width: 890px;
+    @include respond-to(xl) {
+      display: inline-block;
+      position: relative;
+    }
+    @include respond-to(lg) {
+      width: 690px;
+    }
+    @include respond-to(md) {
+      height: 470px;
+      width: 310px;
+    }
+  }
+
+  &__item {
+    border-radius: 5px;
+    display: inline-block;
+    transition: $transition;
+    &:hover {
+      box-shadow: 0 4px 24px 0 rgba(0, 0, 0, .5);
+      transform: translateY(-4px);
+    }
+
+    &:nth-of-type(1) {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 390px;
+      width: 390px;
+      @include respond-to(md) {
+        height: 230px;
+        width: 230px;
+      }
+    }
+
+    &:nth-of-type(2) {
+      position: absolute;
+      top: 50px;
+      right: 400px;
+      height: 90px;
+      width: 90px;
+      @include respond-to(md) {
+        height: 70px;
+        width: 70px;
+        top: 0;
+        right: auto;
+        left: 0;
+      }
+    }
+
+    &:nth-of-type(3) {
+      position: absolute;
+      top: 150px;
+      right: 400px;
+      height: 90px;
+      width: 90px;
+      @include respond-to(md) {
+        height: 70px;
+        width: 70px;
+        right: auto;
+        left: 0;
+        top: 80px;
+      }
+    }
+
+    &:nth-of-type(4) {
+      position: absolute;
+      top: 150px;
+      right: 500px;
+      height: 90px;
+      width: 90px;
+      @include respond-to(md) {
+        height: 70px;
+        width: 70px;
+        right: auto;
+        left: 0;
+        top: 160px;
+      }
+    }
+
+    &:nth-of-type(5) {
+      position: absolute;
+      bottom: 50px;
+      right: 200px;
+      height: 190px;
+      width: 190px;
+      @include respond-to(md) {
+        height: 150px;
+        width: 150px;
+        right: auto;
+        left: 0;
+        bottom: 80px;
+      }
+    }
+
+    &:nth-of-type(6) {
+      position: absolute;
+      bottom: 150px;
+      right: 100px;
+      height: 90px;
+      width: 90px;
+      @include respond-to(md) {
+        height: 70px;
+        width: 70px;
+        right: 80px;
+        bottom: 160px;
+      }
+    }
+
+    &:nth-of-type(7) {
+      position: absolute;
+      bottom: 0;
+      right: 400px;
+      height: 90px;
+      width: 90px;
+      @include respond-to(lg) {
+        bottom: 145px;
+      }
+      @include respond-to(md) {
+        height: 70px;
+        width: 70px;
+        bottom: 160px;
+        right: 0;
+      }
+    }
+
+    &:nth-of-type(8) {
+      position: absolute;
+      bottom: 100px;
+      left: 200px;
+      height: 290px;
+      width: 290px;
+      @include respond-to(lg) {
+        bottom: auto;
+        left: auto;
+        top: 250px;
+        right: 400px;
+        height: 145px;
+        width: 145px;
+      }
+      @include respond-to(md) {
+        height: 150px;
+        width: 150px;
+        top: auto;
+        bottom: 0;
+        right: 0;
+      }
+    }
+
+    &:nth-of-type(9) {
+      position: absolute;
+      bottom: 145px;
+      left: 100px;
+      height: 90px;
+      width: 90px;
+      @include respond-to(lg) {
+        left: auto;
+        right: 500px;
+      }
+      @include respond-to(md) {
+        height: 70px;
+        width: 70px;
+        right: 160px;
+        bottom: 0;
+      }
+    }
+
+    &:nth-of-type(10) {
+      position: absolute;
+      bottom: 45px;
+      left: 0;
+      height: 90px;
+      width: 90px;
+      @include respond-to(lg) {
+        left: auto;
+        right: 600px;
+      }
+      @include respond-to(md) {
+        height: 70px;
+        width: 70px;
+        right: auto;
+        left: 0;
+        bottom: 0;
+      }
+    }
+
+    &:nth-of-type(11) {
+      position: absolute;
+      bottom: 45px;
+      left: 100px;
+      height: 90px;
+      width: 90px;
+      @include respond-to(lg) {
+        left: auto;
+        right: 500px;
+      }
+      @include respond-to(md) {
+        display: none;
+      }
+    }
+
+  }
+
+}

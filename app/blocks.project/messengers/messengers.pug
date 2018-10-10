@@ -1,0 +1,13 @@
+mixin messengers()
+  +b.messengers&attributes(attributes)
+    +e('h4').heading Выберите удобный для вас способ связи<span>Напишите нам в любом мессенджере:</span>
+    +e('a')(href='tg://resolve?domain=odysseyphuket').item._telegram
+      +b('span').icon._telegram-fff
+    +e('a')(href='https://api.whatsapp.com/send?phone=66911625639').item._whatsapp
+      +b('span').icon._whatsapp-fff
+    +e('a')(href='viber://chat?number=66911625639').item._viber
+      +b('span').icon._viber-fff
+    +e('a')(href='https://vk.com' target='_blank').item._vk
+      +b('span').icon._vk-fff
+    +e('a')(href='https://www.messenger.com/' target='_blank').item._messenger
+      +b('span').icon._messenger-fff

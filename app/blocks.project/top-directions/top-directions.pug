@@ -3,9 +3,9 @@ mixin top-directions()
     .grid
       +e.top
         +e.heading-container
-          +b('h2').heading._363636.__heading <span>Популярные </span>направления
+          +b('h2').heading._363636.__heading#top-directions <span>Популярные </span>направления
         +e.button-container
-          +b('a')(href='#').button._arrow-border.__button._desk Все яхты
+          +b('a')(href='#').button._arrow-border.__button._desk Все направления
             +b('span').icon._arrow-363636
 
       +e.bottom
@@ -27,7 +27,7 @@ mixin top-directions()
               +b('span').icon._arrow-363636
           +e.prev-slide._1
           +e.prev-slide._2
-          +e('span').shadow
+          //-+e('span').shadow
         +e.dots-container
 
       +b('a')(href='#').button._arrow-full.__button._mobile Все направления

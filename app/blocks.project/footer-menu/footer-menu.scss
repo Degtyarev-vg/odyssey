@@ -1,0 +1,46 @@
+// Для импорта в файл подключения: @import './app/blocks.project/footer-menu/footer-menu';
+
+@import '../../scss/vars';     // файл с переменными
+@import '../../scss/png-sprite';    // файл с png-спрайтами
+
+
+.footer-menu {
+
+  &__heading {
+    font-family: $Circe-ExtraBold;
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 1;
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 25px;
+  }
+
+  &__item {
+    margin-top: 12px;
+    &:first-of-type {
+      margin-top: 0;
+    }
+    &_active {
+      .footer-menu__link {
+        text-decoration: underline;
+        color: $accentColor;
+      }
+    }
+  }
+
+  &__link {
+    font-family: $Circe-Light;
+    font-size: 14px;
+    font-weight: 200;
+    line-height: 1.2;
+    color: #a7a7a7;
+    text-decoration: none;
+    transition: $transition;
+    &:hover {
+      text-decoration: underline;
+      color: $accentColor;
+    }
+  }
+
+}

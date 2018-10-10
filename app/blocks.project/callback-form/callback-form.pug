@@ -1,0 +1,9 @@
+mixin callback-form()
+  +b('form')(action='#' method='post' autocomplete='off').callback-form&attributes(attributes)
+    +e('h3').heading Заполните форму обратной связи и мы свяжемся с вами в течение 5 минут
+    +b('input')(type='text' name='name' placeholder='Ваше имя').input._name.__input
+    +b('input')(type='text' name='phone' placeholder='Ваш телефон').input._phone.__input
+    +b('input')(type='email' name='email' placeholder='Ваш e-mail').input._email.__input
+    +checkbox('Даю согласие на обработку моих персональных данных').__checkbox
+    br
+    +b('input')(type='submit' value='Связаться').button._full.__button

@@ -1,0 +1,49 @@
+// Для импорта в файл подключения: @import './app/blocks.project/callback-form/callback-form';
+
+@import '../../scss/vars';     // файл с переменными
+@import '../../scss/png-sprite';    // файл с png-спрайтами
+
+
+.callback-form {
+  background-color: #f2f5ff;
+  border-radius: 10px;
+  display: inline-block;
+  padding: 37px 100px 41px;
+  text-align: center;
+  @include respond-to(md) {
+    padding: 15px 10px 21px;
+  }
+
+  &__heading {
+    font-family: $Circe-Light;
+    font-size: 16px;
+    font-weight: 200;
+    line-height: 1.2;
+    color: #999999;
+    margin-bottom: 19px;
+    @include respond-to(md) {
+      line-height: 1.5;
+      margin-bottom: 12px;
+    }
+  }
+
+  &__button {
+    width: 150px;
+  }
+
+  &__input {
+    margin-bottom: 10px;
+    &:nth-of-type(3) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__checkbox {
+    max-width: 308px;
+    margin: 5px 0 15px;
+    @include respond-to(md) {
+      margin: 3px 0 7px;
+    }
+  }
+
+}

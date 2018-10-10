@@ -1,0 +1,57 @@
+mixin footer(isMain, isHeader)
+  +b('footer').footer&attributes(attributes)
+    .grid
+      +e.container
+        +e.left
+          +logo(isMain, isHeader).__logo
+        +e.center
+          +e.socials
+            +e.soc-heading Odyssey в соц.сетях:
+            +b('a')(href='#' target='_blank').icon._vk-fff.__social._vk
+            +b('a')(href='#' target='_blank').icon._inst-fff.__social._instagram
+            +b('a')(href='#' target='_blank').icon._youtube-fff.__social._youtube
+            +b('a')(href='#' target='_blank').icon._fb-fff.__social._fb
+          +e.contacts
+            +e('a')(href='tel:+66911625639').contact._phone +66 (911) 62 56 39
+              +b('span').icon._phone-999999
+            br
+            +e('a')(href='mailto:phuket.odyssey@gmail.com').contact._email phuket.odyssey@gmail.com
+              +b('span').icon._envelope-999999
+            +e.contact._address Таиланд, Пхукет, Boat Lagoon, офис 7
+              +b('span').icon._map-999999
+        +e.right
+          +b('nav').footer-menu.__footer-menu
+            +e('h4').heading Яхты
+            +e('ul').list
+              +e('li').item
+                +e('a')(href='#').link Моторные яхты
+              +e('li').item._active
+                +e('a')(href='#').link Катамараны
+              +e('li').item
+                +e('a')(href='#').link Парусные яхты
+              +e('li').item
+                +e('a')(href='#').link Скоростные катера
+          +b('nav').footer-menu.__footer-menu
+            +e('h4').heading Маршруты
+            +e('ul').list
+              +e('li').item
+                +e('a')(href='#').link Пхи - Пхи
+              +e('li').item
+                +e('a')(href='#').link Симиланкие острова
+              +e('li').item
+                +e('a')(href='#').link Рача Яй - Рача Ной
+              +e('li').item
+                +e('a')(href='#').link Залив Пханг Нга
+          +b('nav').footer-menu.__footer-menu
+            +e('h4').heading Компания
+            +e('ul').list
+              +e('li').item
+                +e('a')(href='#').link Контакты
+              +e('li').item
+                +e('a')(href='#').link О нас
+              +e('li').item
+                +e('a')(href='#').link Отзывы
+              +e('li').item
+                +e('a')(href='#').link Блог
+
+    +e.copyright &copy; Odyssey Phuket, <script>document.write(new Date().getFullYear())</script>
